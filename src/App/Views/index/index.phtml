@@ -1,0 +1,42 @@
+
+<dir class="container">
+
+  <a href="/conta-bancaria/novo">Novo Conta Bancária</a><br>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th>Banco</th>
+        <th>Agencia</th>
+        <th>Conta</th>
+        <th>Titular</th>
+       <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->view->index as $cliente): ?>
+      <tr>
+
+        <td><?= $cliente['banco'] ?></td>
+          <td><?= $cliente['agencia'] ?></td>
+          <td><?= $cliente['conta'] ?></td>
+          <td><?= $cliente['titular'] ?></td>
+           <td><?= $cliente['status'] ?></td>
+        <td>
+        <a href="conta-bancaria/edit?id=<?=$cliente['id']?>">Atualizar</a>
+        <a href="conta-bancaria/delete?id=<?=$cliente['id']?>">Deletar</a>
+         </td>
+
+
+      </tr>
+    <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>
+
+
+</dir>
+
+
