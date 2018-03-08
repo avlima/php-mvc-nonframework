@@ -33,7 +33,7 @@ abstract class Table {
 
      public function fetchAll()
     {
-        $stmt = $this->db->prepare("select * from conta_bancaria");
+        $stmt = $this->db->prepare("select * from ".$this->getTable());
         $stmt->execute();
         return $stmt->fetchAll();
     }
